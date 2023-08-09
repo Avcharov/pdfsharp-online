@@ -1,7 +1,7 @@
 <template>
   <div class="welcome-page">
     <Header></Header>
-    <WelcomePage></WelcomePage>
+    <router-view></router-view>
     <div class="welcome-page-footer"></div>
   </div>
 </template>
