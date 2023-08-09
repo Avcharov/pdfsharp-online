@@ -1,9 +1,13 @@
 <template>
   <div class="header">
-    <div class="header__logo" style="width: 200px">LOGOLOGOLOGO</div>
-    <div class="header__wrapper">
-      <Navbar></Navbar>
-      <div class="header__user" style="width: 100px">PROFILE</div>
+    <div class="container">
+      <div class="header__wrapper">
+        <div class="header__logo" style="width: 200px">LOGOLOGOLOGO</div>
+        <div class="header__box">
+          <Navbar></Navbar>
+          <div class="header__user" style="width: 100px">PROFILE</div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -24,9 +28,16 @@ export default {
   width: 100%;
   border-bottom: 1px solid #363636;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 }
 .header__wrapper {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.header__box {
+  display: flex;
+  align-items: center;
 }
 </style>

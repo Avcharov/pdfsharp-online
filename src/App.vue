@@ -27,9 +27,8 @@ export default {
   font-family: "Inter";
 }
 .container {
-  max-width: 1140px;
+  min-width: 1140px;
   margin: 0 auto;
-  height: 70px;
 }
 .welcome-page {
   background-color: #1a1a1a;
