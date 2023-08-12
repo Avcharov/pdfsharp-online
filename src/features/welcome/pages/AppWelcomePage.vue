@@ -12,11 +12,11 @@
           </p>
 
           <div class="router__actions">
-            <AppButton>
+            <app-button class="button_mr15">
               Why Nou
-            </AppButton>
-            <AppButton class="button_green">Aboba</AppButton>
-            <AppButton>Bingo</AppButton>
+            </app-button>
+            <app-button class="button_green button_mr15">Aboba</app-button>
+            <app-button>Bingo</app-button>
           </div>
         </div>
       </div>
@@ -25,7 +25,7 @@
 
 <script>
     export default {
-        name: "WelcomePage",
+        name: "app-welcome-page",
     }
 </script>
 
@@ -58,4 +58,6 @@
   justify-content: center;
   align-items: center;
 }
+
+
 </style>

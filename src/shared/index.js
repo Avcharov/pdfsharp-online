@@ -1,4 +1,4 @@
-import AppButton from "@/shared/_Button.vue";
+import AppButton from "@/shared/AppButton.vue";
 
 export default [
     AppButton,

@@ -1,19 +1,19 @@
 <template>
   <div class="welcome-page">
-    <Header></Header>
+    <app-header></app-header>
     <router-view></router-view>
     <div class="welcome-page-footer"></div>
   </div>
 </template>
 
 <script>
-import Header from "@/core/components/_Header.vue";
-import WelcomePage from "@/features/welcome/pages/_WelcomePage.vue";
+import AppHeader from "@/core/components/AppHeader.vue";
+import AppWelcomePage from "@/features/welcome/pages/AppWelcomePage.vue";
 export default {
   name: "App",
   components: {
-    Header,
-    WelcomePage,
+    AppHeader,
+    AppWelcomePage,
   },
 };
 </script>

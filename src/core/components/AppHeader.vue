@@ -4,7 +4,7 @@
       <div class="header__wrapper">
         <div class="header__logo" style="width: 200px">LOGOLOGOLOGO</div>
         <div class="header__box">
-          <Navbar></Navbar>
+          <app-navbar></app-navbar>
           <div class="header__user" style="width: 100px">PROFILE</div>
         </div>
       </div>
@@ -13,11 +13,11 @@
 </template>
 
 <script>
-import Navbar from "@/core/components/_Navbar.vue";
+import AppNavbar from "@/core/components/AppNavbar.vue";
 export default {
-  name: "Header",
+  name: "app-header",
   components: {
-    Navbar,
+    AppNavbar,
   },
 };
 </script>

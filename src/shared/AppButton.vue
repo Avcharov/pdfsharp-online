@@ -1,10 +1,10 @@
 <template>
-    <button class="button"><slot></slot></button>
+  <button class="button"><slot></slot></button>
 </template>
 
 <script>
 export default {
-  name: "AppButton",
+  name: "app-button",
 };
 </script>
 
@@ -18,7 +18,6 @@ export default {
   font-size: 18px;
   cursor: pointer;
   font-weight: 600;
-  margin-right: 15px;
   transition: 0.2s all;
 }
 
@@ -36,5 +35,11 @@ export default {
 }
 .button_navbar {
   font-size: 11px;
+  margin-right: 15px;
 }
+
+.button_mr15{
+  margin-right: 15px;
+}
+
 </style>
