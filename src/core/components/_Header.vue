@@ -34,7 +34,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 1140px;
 }
 .header__box {
   display: flex;
