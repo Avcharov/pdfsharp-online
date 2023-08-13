@@ -1,18 +1,18 @@
 <template>
   <div class="login-form">
-    <h3 class="login-form__subheader">Email</h3>
+    <h3 class="login-form__subheader">{{ $t("LOGIN.POPUP.EMAIL") }}</h3>
     <input placeholder="Enter ..." type="text" />
-    <h3 class="login-form__subheader">Password</h3>
+    <h3 class="login-form__subheader">{{ $t("LOGIN.POPUP.PASSWORD") }}</h3>
     <input placeholder="Enter ..." type="text" />
 
     <div class="login-form__buttons">
-      <a href="#" class="login__button-link">Create new</a>
-      <app-button>Submit</app-button>
+      <a href="#" class="login__button-link">{{ $t("LOGIN.POPUP.CREATE_NEW") }}</a>
+      <app-button>{{ $t("LOGIN.POPUP.SUBMIT") }}</app-button>
     </div>
 
     <div class="login__items-divider">
       <div class="item-stick"></div>
-      <div class="item-or"> or </div>
+      <div class="item-or"> {{ $t("LOGIN.POPUP.OR") }} </div>
       <div class="item-stick"></div>
     </div>
 

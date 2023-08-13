@@ -1,0 +1,20 @@
+{
+  "WELCOME": {
+    "HEADER": "The Easiest way to edit and study PDFs",
+    "SUBHEADER": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur",
+    "PREVIEW":"Preview",
+    "GET_STARTED":"Get started",
+    "ABOUT":"About"
+    
+  },
+  "LOGIN": {
+    "HEADER": "Log in",
+    "POPUP":{
+      "EMAIL": "Email",
+      "PASSWORD": "Password",
+      "CREATE_NEW": "Create new",
+      "SUBMIT": "Submit",
+      "OR": "or"
+    }
+  }
+}

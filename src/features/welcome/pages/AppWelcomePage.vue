@@ -1,32 +1,30 @@
 <template>
-    <div class="welcome-page-content">
-      <div class="router">
-        <div class="container">
-          <h1 class="router__header">
-            The Easiest way <br />
-            to edit and study PDFs
-          </h1>
-          <p class="router__subheader">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consequuntur
-          </p>
+  <div class="welcome-page-content">
+    <div class="router">
+      <div class="container">
+        <h1 class="router__header">
+          {{ $t("WELCOME.HEADER") }}
+        </h1>
+        <p class="router__subheader">
+          {{ $t("WELCOME.SUBHEADER") }}
+        </p>
 
-          <div class="router__actions">
-            <app-button class="button_mr15">
-              Why Nou
-            </app-button>
-            <app-button class="button_green button_mr15">Aboba</app-button>
-            <app-button>Bingo</app-button>
-          </div>
+        <div class="router__actions">
+          <app-button class="button_mr15"> {{ $t("WELCOME.PREVIEW") }}
+          </app-button>
+          <app-button class="button_green button_mr15">{{ $t("WELCOME.GET_STARTED") }}</app-button>
+          <app-button>{{ $t("WELCOME.ABOUT") }}</app-button>
         </div>
       </div>
     </div>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "app-welcome-page",
-    }
+export default {
+  name: "app-welcome-page",
+
+};
 </script>
 
 <style scoped>
@@ -51,13 +49,11 @@
   color: #979797;
   font-size: 18px;
 }
-.router__actions{
+.router__actions {
   margin-top: 30px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-
 </style>

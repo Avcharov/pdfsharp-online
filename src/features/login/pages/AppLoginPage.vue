@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="login-page__container">
       <h1 class="login-page__header">
-        <em> Log in </em>
+        <em> {{ $t("LOGIN.HEADER") }}</em>
       </h1>
       <app-login-popup></app-login-popup>
     </div>
