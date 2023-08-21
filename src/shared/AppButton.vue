@@ -42,4 +42,8 @@ export default {
   margin-right: 15px;
 }
 
+.button_select-body{
+  width: 100%;
+}
+
 </style>
