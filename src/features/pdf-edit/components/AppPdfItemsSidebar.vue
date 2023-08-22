@@ -32,14 +32,14 @@ export default {
     data() {
         return {
             items: [
-                new TextItem(1, "Text 1", 0, 10, 0, 16, false, false, false, true),
-                new TextItem(2, "Text 2", 10, 20, 5, 25, false, false, false, true),
-                new TextItem(3, "Text 3", 50, 20, 5, 25, false, false, false, true)
+                new TextItem("Text 1", 0, 10, 0, 16, false, false, false, true),
+                new TextItem("Text 2", 10, 20, 5, 25, false, false, false, true),
+                new TextItem("Text 3", 50, 20, 5, 25, false, false, false, true)
             ],
             images: [
-                new ImageItem(1, "Image 1", 0, 10, 0, 0, true),
-                new ImageItem(2, "Image 2", 10, 20, 5, 0, true),
-                new ImageItem(3, "Image 3", 50, 20, 5, 0, true)
+                new ImageItem("Image 1", 0, 10, 0, 0, true),
+                new ImageItem("Image 2", 10, 20, 5, 0, true),
+                new ImageItem("Image 3", 50, 20, 5, 0, true)
             ],
             isTextBarHidden: false,
             isImageBarHidden: false

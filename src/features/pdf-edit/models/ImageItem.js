@@ -1,6 +1,5 @@
 class ImageItem {
-    constructor(id, name, xPos, yPos, rotation, opacity, isHidden) {
-      this.id = id;
+    constructor(name, xPos, yPos, rotation, opacity, isHidden) {
       this.name = name;
       this.xPos = xPos;
       this.yPos = yPos;
