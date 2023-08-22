@@ -1,5 +1,6 @@
 class TextItem {
-    constructor(name, xPos, yPos, rotation, fontSize, isBold, isCursive, isUnderlined, isHidden) {
+    constructor(id, name, xPos, yPos, rotation, fontSize, isBold, isCursive, isUnderlined, isHidden) {
+      this.id = id;
       this.name = name;
       this.xPos = xPos;
       this.yPos = yPos;
