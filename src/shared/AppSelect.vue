@@ -12,7 +12,7 @@
                 {{ addItemText }}
             </app-button>
             <div class="select__body-items">
-                <app-item v-for="item in items" :item="item" :key="item.name">
+                <app-item v-for="item in items" :item="item" :key="item.isUnderlined">
                 </app-item>
             </div>
         </div>
