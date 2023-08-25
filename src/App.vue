@@ -30,8 +30,37 @@ export default {
   max-width: 1140px;
   margin: 0 auto;
 }
+
+.container_s {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .welcome-page {
   background-color: #1a1a1a;
   min-height: 100vh;
+}
+
+.hidden {
+  display: none;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #1f1f1f;
+  border: 4px solid transparent;
+  border-radius: 8px;
+  background-clip: padding-box;
+}
+
+*::-webkit-scrollbar {
+  width: 16px;
 }
 </style>

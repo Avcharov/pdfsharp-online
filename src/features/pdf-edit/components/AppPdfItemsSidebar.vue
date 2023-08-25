@@ -1,5 +1,5 @@
 <template>
-    <div class="pdf-items-sidebar">
+    <AppPdfItemSidebar>
         <app-select 
             v-model:items="items" 
             v-model:isSelectOpen="isTextBarHidden" 
@@ -14,7 +14,7 @@
             :addItemText="$t('PDF.BUTTON.ADD_IMAGE')"
             @addItem="addImage"
         ></app-select>
-    </div>
+    </AppPdfItemSidebar>
 </template>
 
 <script>
@@ -22,12 +22,14 @@ import AppItem from '@/shared/AppItem.vue';
 import AppSelect from "@/shared/AppSelect.vue";
 import TextItem from "@/features/pdf-edit/models/TextItem.js"; 
 import ImageItem from "@/features/pdf-edit/models/ImageItem.js"; 
+import { AppPdfItemSidebar } from "@/styles/styles";
 
 export default {
     name: "app-pdf-items-sidebar",
     components: {
         AppItem,
-        AppSelect
+        AppSelect,
+        AppPdfItemSidebar
     },
     data() {
         return {
@@ -52,23 +54,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-.pdf-items-sidebar {
-    height: calc(100vh - 55px);
-    background-color: #363636;
-    width: 300px;
-    padding: 10px;
-    overflow-y: scroll;
-}
-*::-webkit-scrollbar-thumb {
-  background-color: #1f1f1f;
-  border: 4px solid transparent;
-  border-radius: 8px;
-  background-clip: padding-box;
-}
-
-*::-webkit-scrollbar {
-  width: 16px;
-}
-</style>

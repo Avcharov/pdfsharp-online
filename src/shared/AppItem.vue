@@ -1,5 +1,5 @@
 <template>
-    <div class="item">
+    <AppItem>
         <div class="item__header">
             <h4 class="item__header-text">{{ item.name }}</h4>
             <div class="item__header-buttons">
@@ -34,12 +34,13 @@
                 <input class="item__body-property-value" type="number" v-model="item.opacity" />
             </div>
         </div>
-    </div>
+    </AppItem>
 </template>
 
 <script>
 import ImageItem from '@/features/pdf-edit/models/ImageItem.js';
 import TextItem from '@/features/pdf-edit/models/TextItem.js';
+import { AppItem } from "@/styles/styles";
 export default {
     name: "app-item",
     props: {
@@ -47,6 +48,9 @@ export default {
             type: Object,
             required: true
         },
+    },
+    components: {
+        AppItem
     },
     methods: {
         toggleItem() {
@@ -63,81 +67,3 @@ export default {
     },
 }
 </script>
-
-<style scoped>
-.item:not(:first-child) {
-    margin-top: 10px;
-}
-.item__header {
-    padding: 12px 16px;
-    background-color: #1d1d1d;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.item__header-text {
-    color: #fff;
-}
-
-.item__header-button {
-    color: #fff;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.item__header-button:not(:last-child) {
-    margin-right: 10px;
-}
-
-.item__header-button--trash {
-    color: #901414;
-}
-
-.item__header-button--chevron {
-    color: #fff;
-}
-
-.item__body {
-    padding: 12px 16px;
-    background-color: #282828;
-}
-
-.item__body-property {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.item__body-property:not(:first-child) {
-    margin-top: 5px;
-}
-
-.item__body-property-name {
-    color: #fff;
-    font-weight: 600;
-    font-size: 16px;
-}
-
-.item__body-property-value {
-    width: 50px;
-    border-radius: 5px;
-    border: 1px solid #fff;
-    color: #fff;
-    background-color: transparent;
-    padding: 5px;
-    font-weight: 600;
-    font-size: 16px;
-    text-align: center;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-}
-
-input[type=number] {
-    -moz-appearance: textfield;
-}
-</style>

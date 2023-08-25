@@ -1,5 +1,5 @@
 <template>
-    <div class="select">
+    <AppSelect>
         <div class="select__header">
             <h4 class="select__header-text">{{ name }}</h4>
             <button class="select__header-chevron-button" @click="toggleSelect">
@@ -16,15 +16,18 @@
                 </app-item>
             </div>
         </div>
-    </div>
+    </AppSelect>
 </template>
 
 <script>
 import AppItem from './AppItem.vue';
+import { AppSelect } from '@/styles/styles';
+
 export default {
     name: "app-select",
     components: {
-        AppItem
+        AppItem,
+        AppSelect
     },
     props: {
         name: {
@@ -58,39 +61,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-.select:not(:first-child) {
-    margin-top: 10px;
-}
-
-.select__header {
-    padding: 12px 16px;
-    background-color: #1a1a1a;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.select__header-text {
-    color: #fff;
-}
-
-.select__header-chevron-button {
-    color: #fff;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.select__body {
-    padding: 12px 16px;
-    background-color: #303030;
-}
-
-.select__body-items {
-    margin-top: 15px;
-}
-
-
-</style>
