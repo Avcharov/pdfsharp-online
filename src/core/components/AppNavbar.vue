@@ -1,24 +1,23 @@
 <template>
-  <div class="navbar">
-    <app-button class="button button_navbar">aboba</app-button>
-    <app-button class="button button_navbar">aboba</app-button>
-    <app-button class="button button_navbar">aboba</app-button>
-    <app-button class="button button_navbar">aboba</app-button>
-  </div>
+  <AppNavbar>
+    <app-button class="button_navbar">Descr 1</app-button>
+    <app-button class="button_navbar">Descr 2</app-button>
+    <app-button class="button_navbar">Descr 3</app-button>
+    <app-button class="button_navbar">Descr 4</app-button>
+  </AppNavbar>
 </template>
 
 <script>
+import { AppNavbar } from "@/styles/styles";
 export default {
   name: "app-navbar",
+  components: {
+    AppNavbar
+  }
 };
 </script>
 
 <style scoped>
-.navbar {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  margin-right: 30px;
-}
+
 
 </style>
