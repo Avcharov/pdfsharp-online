@@ -1,8 +1,14 @@
 <template>
     <div>
-        <app-pdf-items-sidebar v-model:images="images" v-if="isItemsSideBarVisible" @addImage="openAddImagePopup"
-            @addImageFast="addImageFast" @deleteImage="deleteImg"></app-pdf-items-sidebar>
-        <app-add-image-popup v-if="isAddImagePopupVisible" @closePopup="closeAddImagePopup"></app-add-image-popup>
+        <app-pdf-items-sidebar v-if="isItemsSideBarVisible" 
+            v-model:images="images" 
+            @addImage="openAddImagePopup"
+            @addImageFast="addImageFast" 
+            @deleteImage="deleteImg"
+        ></app-pdf-items-sidebar>
+        <app-add-image-popup v-if="isAddImagePopupVisible"
+            @closePopup="closeAddImagePopup"
+        ></app-add-image-popup>
     </div>
 </template>
 
@@ -24,7 +30,9 @@ export default {
             isItemsSideBarVisible: true,
             isAddImagePopupVisible: false,
             textItems: [],
-            images: []
+            images: [],
+            idGenerator: this.generateUniqueId(),
+            imageItemIndex: 0
         }
     },
     created() {
@@ -48,6 +56,7 @@ export default {
                         this.updateImage(i.id, i)
                     )
                 )
+                this.imageItemIndex = this.images[this.images.length - 1].id + 1;
             }
         },
 
@@ -58,7 +67,8 @@ export default {
         updateImage(id, image) {
             this.images.filter(i => i.id === id)
                 .forEach(i => {
-                    const { xPos, yPos, rotation, opacity } = image;
+                    const {name, xPos, yPos, rotation, opacity } = image;
+                    i.name = name;
                     i.xPos = xPos;
                     i.yPos = yPos;
                     i.rotation = rotation;
@@ -69,11 +79,13 @@ export default {
         async deleteImg(imageId) {
             await deleteImage(imageId);
             this.images = this.images.filter(i => i.id !== imageId);
+            this.imageItemIndex = this.images[this.images.length - 1].id + 1;
             unsubscribeFromImage(imageId);
         },
 
         async addImageFast() {
-            const currentImage = new ImageItem(54, "Image 5458", 80, 80, 5, 0, true, 1);
+            const newItemId = this.idGenerator.next().value;
+            const currentImage = new ImageItem(newItemId, "Image " + newItemId, 80, 80, 5, 0, true, 1);
 
             await postImage(currentImage);
 
@@ -82,6 +94,13 @@ export default {
             subscribeToImage(currentImage.id, (currentImage) => {
                 this.updateImage(currentImage.id, currentImage);
             });
+        },
+
+        *generateUniqueId() {
+            let id = this.imageItemIndex;
+            while (true) {
+                yield id++;
+            }
         },
     },
 }
