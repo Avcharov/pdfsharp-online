@@ -32,7 +32,7 @@ export default {
             textItems: [],
             images: [],
             idGenerator: this.generateUniqueId(),
-            imageItemIndex: 0
+            imageItemIndex: 1
         }
     },
     created() {
