@@ -3,10 +3,10 @@
         <div class="item__header">
             <h4 class="item__header-text">{{ item.name }}</h4>
             <div class="item__header-buttons">
-                <button class="item__header-button item__header-button--trash" @click="">
+                <button class="item__header-button item__header-button--trash" @click="deleteItem">
                     <fa :icon="['fa', 'trash']" size="lg" />
                 </button>
-                <button class="item__header-button item__header-button--chevron" @click="toggleItem()">
+                <button class="item__header-button item__header-button--chevron" @click="toggleItem">
                     <fa v-if="item.isHidden" :icon="['fa', 'chevron-down']" size="lg" />
                     <fa v-else :icon="['fa', 'chevron-up']" size="lg" />
                 </button>
@@ -55,6 +55,9 @@ export default {
     methods: {
         toggleItem() {
             this.item.isHidden = !this.item.isHidden;
+        },
+        deleteItem() {
+            this.$emit('deleteItem');
         }
     },
     computed: {

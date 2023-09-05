@@ -12,8 +12,9 @@
                 {{ addItemText }}
             </app-button>
             <div class="select__body-items">
-                <app-item v-for="item in items" :item="item" :key="item.id">
-                </app-item>
+                <app-item v-for="item in items" :item="item" :key="item.id"
+                    @deleteItem="deleteItem(item.id)"
+                 ></app-item>
             </div>
         </div>
     </AppSelect>
@@ -55,8 +56,11 @@ export default {
         toggleSelect() {
             this.$emit('update:isSelectOpen', !this.isSelectOpen);
         },
-        addItem(){
+        addItem() {
             this.$emit('addItem');
+        },
+        deleteItem(itemId) {
+            this.$emit('deleteItem', itemId);
         }
     }
 }

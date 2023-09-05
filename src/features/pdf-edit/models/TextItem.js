@@ -1,5 +1,5 @@
 class TextItem {
-    constructor(id, name, xPos, yPos, rotation, fontSize, isBold, isCursive, isUnderlined, isHidden) {
+    constructor(id, name, xPos, yPos, rotation, fontSize, isBold, isCursive, isUnderlined, isHidden, viewId) {
       this.id = id;
       this.name = name;
       this.xPos = xPos;
@@ -10,6 +10,7 @@ class TextItem {
       this.isCursive = isCursive;
       this.isUnderlined = isUnderlined;
       this.isHidden = isHidden;
+      this.viewId = viewId;
     }
   }
 
